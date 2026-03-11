@@ -85,8 +85,8 @@ describe("Quit Command (/q and /exit)", () => {
 		// Press Enter
 		stdin.write("\r")
 
-		// handleExit has a 150ms timeout
-		await delay(200)
+		// handleExit has a 150ms timeout, add extra buffer for Windows
+		await delay(300)
 
 		expect(mockExit).toHaveBeenCalled()
 		expect(mockOnExit).toHaveBeenCalled()
@@ -103,8 +103,8 @@ describe("Quit Command (/q and /exit)", () => {
 		// Press Enter
 		stdin.write("\r")
 
-		// handleExit has a 150ms timeout
-		await delay(200)
+		// handleExit has a 150ms timeout, add extra buffer for Windows
+		await delay(300)
 
 		expect(mockExit).toHaveBeenCalled()
 		expect(mockOnExit).toHaveBeenCalled()
